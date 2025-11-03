@@ -53,6 +53,31 @@ public class main {
                    customer.setCustomerId(id);
                    customers.add(customer);
                    break;
+                   case 2:
+                       System.out.println("Enter customer id: ");
+                       id=sc.nextLine().trim();
+
+                       for(Customer c : customers)
+                       {
+                           if (id.equals(c.getCustomerId()))
+                           {
+                               System.out.println("Enter new name: ");
+                               name=sc.nextLine().trim();
+                               customer.setName(name);
+                               System.out.println("Enter new email: ");
+                               email=sc.nextLine().trim();
+                               customer.setEmail(email);
+                               System.out.println("Enter new phone number: ");
+                               phone=sc.nextLine().trim();
+                               c.setPhoneNumber(phone);
+                           }
+                           else
+                           {
+                               System.out.println("Customer ID does not exist");
+                           }
+                       }
+                       break;
+
                }
 
 
