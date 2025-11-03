@@ -50,6 +50,16 @@ public class main {
                            id=sc.nextLine().trim();
                        }
                    }
+                   System.out.println("Enter Customer Name: ");
+                   name=sc.nextLine().trim();
+                   System.out.println("Enter Customer Email: ");
+                   email=sc.nextLine().trim();
+                   System.out.println("Enter Customer Phone Number: ");
+                   phone=sc.nextLine().trim();
+
+                   customer.setName(name);
+                   customer.setEmail(email);
+                   customer.setPhoneNumber(phone);
                    customer.setCustomerId(id);
                    customers.add(customer);
                    break;
