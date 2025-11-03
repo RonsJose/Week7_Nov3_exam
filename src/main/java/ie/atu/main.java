@@ -16,7 +16,7 @@ public class main {
 
         while(option!=4)
         {
-            System.out.println("==== Customer Management System ====\n\n1) Add Customer\n\n2) Update Customer\n\n 3) Display All\n\n 4) Exit\n\n");
+            System.out.println("\n==== Customer Management System ====\n\n1) Add Customer\n\n2) Update Customer\n\n 3) Display All\n\n 4) Exit\n");
 
            while(true)
            {
@@ -68,7 +68,7 @@ public class main {
                    case 2:
                        System.out.println("Enter customer id: ");
                        id=sc.nextLine().trim();
-
+                       int check=0;
                        for(Customer c : customers)
                        {
                            if (id.equals(c.getCustomerId()))
@@ -90,19 +90,27 @@ public class main {
                                c.setName(name);
                                c.setEmail(email);
                                c.setPhoneNumber(phone);
+                               check=0;
+                               break;
                            }
                            else
                            {
-                               System.out.println("Customer ID does not exist");
+                               check=1;
                            }
                        }
-                       break;
+                       if(check==1)
+                       {
+                           System.out.println("Customer ID does not exist");
+                       }
+                            break;
                        case 3:
                            System.out.println("All customer info\n");
                            for (Customer c : customers)
                            {
                                System.out.println(c);
                            }
+                           break;
+                       case 4:
                            break;
                            default:
                                System.out.println("Please enter a valid option");
