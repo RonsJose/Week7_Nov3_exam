@@ -52,8 +52,10 @@ public class main {
                    }
                    System.out.println("Enter Customer Name: ");
                    name=sc.nextLine().trim();
+
                    System.out.println("Enter Customer Email: ");
                    email=sc.nextLine().trim();
+
                    System.out.println("Enter Customer Phone Number: ");
                    phone=sc.nextLine().trim();
 
@@ -76,14 +78,17 @@ public class main {
                                System.out.println("Old name: " + c.getName());
                                System.out.println("Enter new name: ");
                                name=sc.nextLine().trim();
-                               customer.setName(name);
+
                                System.out.println("Old email: "+c.getEmail());
                                System.out.println("Enter new email: ");
                                email=sc.nextLine().trim();
-                               customer.setEmail(email);
+
                                System.out.println("Old phone number: "+c.getPhoneNumber());
                                System.out.println("Enter new phone number: ");
                                phone=sc.nextLine().trim();
+
+                               c.setName(name);
+                               c.setEmail(email);
                                c.setPhoneNumber(phone);
                            }
                            else
