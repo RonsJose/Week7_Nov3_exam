@@ -71,12 +71,17 @@ public class main {
                        {
                            if (id.equals(c.getCustomerId()))
                            {
+                               System.out.println("Customer ID found\n");
+
+                               System.out.println("Old name: " + c.getName());
                                System.out.println("Enter new name: ");
                                name=sc.nextLine().trim();
                                customer.setName(name);
+                               System.out.println("Old email: "+c.getEmail());
                                System.out.println("Enter new email: ");
                                email=sc.nextLine().trim();
                                customer.setEmail(email);
+                               System.out.println("Old phone number: "+c.getPhoneNumber());
                                System.out.println("Enter new phone number: ");
                                phone=sc.nextLine().trim();
                                c.setPhoneNumber(phone);
@@ -87,7 +92,15 @@ public class main {
                            }
                        }
                        break;
-
+                       case 3:
+                           System.out.println("All customer info\n");
+                           for (Customer c : customers)
+                           {
+                               System.out.println(c);
+                           }
+                           break;
+                           default:
+                               System.out.println("Please enter a valid option");
                }
 
 
